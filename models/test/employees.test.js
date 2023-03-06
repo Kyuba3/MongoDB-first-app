@@ -1,6 +1,5 @@
 const Employee = require('../employees.model');
 const expect = require('chai').expect;
-const mongoose = require('mongoose');
 
 describe('Employee', () => {
   it('should throw an error if no attribiutes given', () => {
@@ -46,8 +45,5 @@ describe('Employee', () => {
         expect(err).to.not.exist;
       });
     }
-  });
-  after(() => {
-    mongoose.models = {};
   });
 });
